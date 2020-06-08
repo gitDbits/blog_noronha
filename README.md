@@ -1,13 +1,14 @@
 # Blog Noronha
 
-![Screenshot](https://i.imgur.com/jpkvJL8.png)
+![Screenshot](https://i.imgur.com/ls5aTgJ.png)
 
-Blog Noronha, um exemplo de blog simples com a funcionalidade ActionText no Rails
+O Blog Noronha é um exemplo de blog simples com a funcionalidade ActionText do Rails 6
  
 * Controle de usuário, cadastra-se para realizar uma publicação.
 * Upload de imagem com validação de presença, tamanho e tipo.
 * Paginação para a lista de postagens.
-* Paginação para a lista de postagens.
+* Controle de processamento de imagens, ImageMagick/GraphicsMagick
+* Icones fontawesome
 
 ## Vamos lá
 
@@ -47,29 +48,25 @@ bundle install
 ```
 ## Dependências YARN
 
-- Add framework CSS BULMA
+- Execute o comando para o yarn verificar todas as dependências
 ```
-yarn add bulma
-```
-
-- No arquivo application.js adicione: 
-```
-import 'bulma/css/bulma.css'
+yarn install --check-files
 ```
 
-- Add fontawesome para os icones
+## Acessando o blog
 
-- Os arquivos para utilização na aplicação spotcode: |Músicas|Imagem artista|Imagem album| pode ser realizado, no link abaixo;
-
-- Criar o banco de dados
+- Execute o servidor local
 ```
-rails db:create
+rails s
 ```
 
-- Rodar as migrations
-```
-rails db:migrate
-```
+Agora basta acessar o endereço localhost:3000
+
+## Sugestões
+
+- Que tal implantar um controle de TAG por cada Post;
+- E implementar um módulo de busca por TAG e Autor;
+
 ## Construido com
 
 * [Ruby on Rails](https://rubyonrails.org/) - The Ruby on Rails framework for API
@@ -80,4 +77,4 @@ rails db:migrate
 
 * [Image processing](https://github.com/janko/image_processing) - High-level image processing wrapper for libvips and ImageMagick/GraphicsMagick
 
-
+* [Font Awesome](https://fontawesome.com/) - Library icons CSS
