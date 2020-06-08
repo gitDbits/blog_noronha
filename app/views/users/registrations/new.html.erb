@@ -1,0 +1,59 @@
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <figure class="image is-128x128">
+          <img src="http://diegonoronha.com.br/img/hello_world.jpeg" class="is-rounded">
+        </figure>
+      </div>
+      <div class="columns is-centered">
+        <h4 class="title">CADASTRO</h4>
+      </div>
+      <div class="columns is-centered">
+        <h1>BLOG NORONHA</h1>
+      </div>
+      <div class="columns is-centered">
+         <%= devise_error_messages! %>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-6">
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "box"}) do |f| %>
+            <div class="field">
+              <label for="" class="label">E-mail</label>
+              <div class="control has-icons-left">
+                <%= f.email_field :email, autocomplete: "email", class: "input", placeholder: "Digite o seu e-mail" %>
+                <span class="icon is-small is-left">
+                  <i class="fa fa-envelope"></i>
+                </span>
+              </div>
+            </div>
+            <div class="field">
+              <label for="" class="label">Senha</label>
+              <div class="control has-icons-left">
+                <%= f.password_field :password, class: 'input', placeholder: "Digite a sua senha" %>
+                <span class="icon is-small is-left">
+                  <i class="fa fa-lock"></i>
+                </span>
+              </div>
+            </div>
+            <div class="field">
+              <label for="" class="label">Confirmar senha</label>
+              <div class="control has-icons-left">
+                <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input", placeholder: "Confirmar senha"%>
+                <span class="icon is-small is-left">
+                  <i class="fa fa-lock"></i>
+                </span>
+              </div>
+            </div>
+            <div class="field">
+              <button class="button is-success is-medium is-fullwidth is-rounded">CADASTRAR</button>
+            </div>
+            <div class="field">
+              <a href="/" class="button is-info is-medium is-fullwidth is-rounded">VOLTAR</a>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

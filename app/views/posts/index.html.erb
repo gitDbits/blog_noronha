@@ -1,0 +1,29 @@
+</br></br>
+<div class="columns is-centered">
+  <p class="title is-1 is-spaced">Blog Noronha</p>
+</div>
+</br>
+<hr>
+<% @posts.each do |post| %>
+  <div class="columns is-centered">
+    <div class="column is-four-fifths">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-full is-marginless is-3by1">
+            <%= image_tag post.featured_image %>
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <a href="<%= post_path(id: post.id) %>"><p class="title is-4"><%= post.title %></p></a>
+            </div>
+          </div>
+          <p><i class="fa fa-user"></i> Autor: <strong><%= post.author %></strong></p>
+          <p><i class="fa fa-clock"></i> Postado em: <strong><%= post.created_at.strftime("%d/%m/%Y") %></strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+<%== pagy_bulma_nav(@pagy) %>

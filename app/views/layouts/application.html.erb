@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Diego Noronha</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render 'shared/navbar' %>
+    <div class="container">
+      <div class='row'>
+        <%= yield %>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Blog Noronha </strong> by <a href="http://diegonoronha.com.br">Diego Noronha</a>. The source code is free <i class="fa fa-heart"></i>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
